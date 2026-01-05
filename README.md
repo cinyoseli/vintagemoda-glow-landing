@@ -11,7 +11,7 @@ Landing page para emprendimiento de moda vintage, diseñada para mostrar product
 Crear una web simple, elegante y funcional para emprendimientos que venden a través de redes sociales y WhatsApp.
 
 ## Capturas
-![Inicio](./images/vintagemoda-hero.jpg)
-![Productos](./images/vintagemoda-productos.jpg)
-![Sobre](./images/vintagemoda-sobre.jpg)
-![Mobile](./images/vintagemoda-mobile.jpg)
+![Inicio](./images/vintagemoda-hero.png)
+![Productos](./images/vintagemoda-productos.png)
+![Sobre](./images/vintagemoda-sobre.png)
+![Mobile](./images/vintagemoda-mobile.png)
