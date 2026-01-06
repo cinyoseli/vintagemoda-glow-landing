@@ -368,3 +368,25 @@ section p {
   color: #d4af37;
   font-weight: bold;
 }
+/* ===== INTRO SERVICIOS ===== */
+
+.intro-servicios {
+  background-color: #ffffff;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.intro-servicios h2 {
+  max-width: 800px;
+  margin: 0 auto 20px auto;
+  font-size: 2.2rem;
+  color: #222;
+}
+
+.intro-servicios p {
+  max-width: 750px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #555;
+}
