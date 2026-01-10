@@ -15,7 +15,8 @@
 
 /* BODY */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Playfair Display', serif;
+
   color: var(--negro);
   background-color: var(--blanco);
   line-height: 1.6;
@@ -228,4 +229,105 @@ a, button, .producto {
   margin: 0 auto 15px auto;
   border-radius: 8px;
   object-fit: cover;
+}
+.instagram-gallery {
+  padding: 60px 20px;
+  background-color: #fafafa;
+  text-align: center;
+}
+
+.insta-header {
+  max-width: 600px;
+  margin: 0 auto 30px auto;
+  opacity: 0.9;
+}
+
+.insta-header h3 {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.insta-header p {
+  font-size: 0.9rem;
+  color: var(--gris);
+}
+
+.insta-slider {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding-bottom: 10px;
+  justify-content: center;
+}
+
+.insta-slider img {
+  width: 180px;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.insta-slider img:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .insta-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.instagram-preview {
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.instagram-preview h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+}
+
+.instagram-preview p {
+  font-size: 0.95rem;
+  color: #aaa;
+  margin-bottom: 2rem;
+}
+
+.ig-card {
+  position: relative;
+  display: inline-block;
+  max-width: 420px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.ig-card img {
+  width: 100%;
+  display: block;
+  border-radius: 20px;
+}
+
+.ig-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ig-overlay span {
+  background-color: #c7a6ff;
+  color: #0f0f0f;
+  padding: 12px 26px;
+  border-radius: 30px;
+  font-weight: 500;
+}
+
+.ig-card:hover .ig-overlay {
+  opacity: 1;
 }
