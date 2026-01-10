@@ -13,6 +13,22 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
+<script>
+  const reveals = document.querySelectorAll('.reveal');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('active');
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  reveals.forEach(el => observer.observe(el));
+</script>
 <body>
 
   <!-- HERO -->
@@ -24,7 +40,7 @@
   </header>
 
   <!-- SOBRE MI -->
-  <section class="about">
+  <section class="about reveal">
     <h3>Sobre mí</h3>
     <p>
       Soy desarrolladora web enfocada en front-end. Me gusta convertir ideas en experiencias
@@ -34,13 +50,13 @@
   </section>
 
   <!-- PROYECTOS -->
-  <section id="proyectos" class="projects">
+  <section id="proyectos" class="projects reveal">
     <h3>Proyectos</h3>
 
     <div class="projects-grid">
 
       <!-- PROYECTO 1 -->
-      <div class="project-card">
+      <div class="project-card reveal">
         <div class="project-image">
   <img src="assets/img/vintagemoda-glow/preview-vintage-moda-glow.jpg" alt="Vintage Moda Glow">
   <div class="overlay">
@@ -63,7 +79,7 @@
   </section>
 
   <!-- CONTACTO -->
-  <section class="contact">
+  <section class="contact reveal">
     <h3>Contacto</h3>
     <p>Email: <a href="mailto:cintiaramos.dev@gmail.com">cintiaramos.dev@gmail.com</a></p>
     <p>GitHub: <a href="https://github.com/cinyoseli" target="_blank">github.com/cinyoseli</a></p>

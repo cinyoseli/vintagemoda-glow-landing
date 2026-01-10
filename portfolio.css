@@ -57,8 +57,9 @@ body {
   }
 
 .btn:hover {
-  background-color: #b08cff;
-  transform: translateY(-2px);
+   background-color: #b08cff;
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(199, 166, 255, 0.35);
 }
 @media (max-width: 768px) {
   .hero h1 {
@@ -81,15 +82,31 @@ body {
   position: relative;
 }
 
+@keyframes pulseGlow {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.15);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.6;
+  }
+}
+
 .hero::after {
   content: '';
   position: absolute;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(199,166,255,0.15), transparent 70%);
+  width: 320px;
+  height: 320px;
+  background: radial-gradient(circle, rgba(199,166,255,0.18), transparent 70%);
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  animation: pulseGlow 6s ease-in-out infinite;
   z-index: 0;
 }
 
@@ -123,12 +140,12 @@ body {
   flex-direction: column;
   gap: 15px;
 
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+ transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
 .project-card img {
@@ -245,7 +262,10 @@ footer {
 .project-image:hover .overlay {
   opacity: 1;
 }
-
+.project-image:hover .overlay span {
+  transform: translateY(0);
+  opacity: 1;
+  } 
 .overlay span {
   background-color: #c7a6ff;
   color: #0f0f0f;
@@ -253,8 +273,56 @@ footer {
   border-radius: 20px;
   font-size: 0.75rem;
   font-weight: 500;
+   transform: translateY(10px);
+  opacity: 0;
+  transition: all 0.3s ease;
 }
 
 .hero .btn {
   align-self: center;
+}
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero h1,
+.hero h2,
+.hero p,
+.hero .btn {
+  opacity: 0;
+  animation: fadeUp 0.8s ease forwards;
+}
+
+.hero h1 { animation-delay: 0.1s; }
+.hero h2 { animation-delay: 0.25s; }
+.hero p  { animation-delay: 0.4s; }
+.hero .btn { animation-delay: 0.55s; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 768px) {
+  .reveal {
+    transform: translateY(25px);
+    transition-duration: 0.6s;
+  }
+
+  .btn:hover {
+    transform: none;
+    box-shadow: none;
+  }
 }
