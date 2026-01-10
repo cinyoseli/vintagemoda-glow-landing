@@ -52,7 +52,9 @@ body {
   border-radius: 30px;
   font-weight: 500;
   transition: all 0.3s ease;
-}
+   display: inline-block;
+   margin-top: 1.5rem;
+  }
 
 .btn:hover {
   background-color: #b08cff;
