@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog de Viajes | Cintia Ramos</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="portfolio.css">
+  <link rel="stylesheet" href="blog.css">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- HEADER DEL BLOG -->
+  <header class="blog-hero">
+    <a href="index.html" class="back-link">← Volver al portfolio</a>
+    <h1>Blog de Viajes</h1>
+    <p>Descubre los mejores destinos, consejos y experiencias para tus próximas aventuras</p>
+  </header>
+
+  <!-- FILTROS POR CATEGORÍA -->
+  <section class="blog-filters">
+    <div class="filter-container">
+      <button class="filter-btn active" data-category="todos">Todos</button>
+      <button class="filter-btn" data-category="destinos">Destinos</button>
+      <button class="filter-btn" data-category="presupuesto">Presupuesto</button>
+      <button class="filter-btn" data-category="guias">Guías</button>
+      <button class="filter-btn" data-category="checklists">Checklists</button>
+    </div>
+  </section>
+
+  <!-- GRID DE ARTÍCULOS -->
+  <main class="blog-container">
+    <div class="articles-grid">
+
+      <!-- ARTÍCULO 1 -->
+      <article class="article-card" data-category="destinos">
+        <div class="article-image" style="background: linear-gradient(135deg, #ff6b6b, #ee5a6f);">
+          <span class="category-badge">Destinos</span>
+        </div>
+        <div class="article-content">
+          <h3>5 Destinos Accesibles en 2026</h3>
+          <p class="article-date">15 de enero, 2026</p>
+          <p class="article-excerpt">Explora los mejores destinos para viajar este año sin quebrar el banco. Desde playas paradisíacas hasta ciudades históricas.</p>
+          <button class="read-btn" onclick="toggleArticle(this)">Leer más</button>
+        </div>
+        <div class="article-full" style="display: none;">
+          <div class="full-content">
+            <h4>5 Destinos Accesibles en 2026</h4>
+            <p>Este 2026 es el año perfecto para explorar nuevos destinos sin gastar una fortuna. Aquí te presento mis favoritos:</p>
+            <ul>
+              <li><strong>Portugal:</strong> Europa con presupuesto bajo. Oporto y Lisboa son ciudades increíbles.</li>
+              <li><strong>México:</strong> Playas, ruinas mayas y comida deliciosa. Muy accesible para viajeros con presupuesto limitado.</li>
+              <li><strong>Tailandia:</strong> Sudeste asiático al alcance de tu billetera. Bangkok, Chiang Mai y playas tropicales.</li>
+              <li><strong>Colombia:</strong> Cartagena, Santa Marta, Bogotá. Un destino subestimado con mucho por ofrecer.</li>
+              <li><strong>Grecia (islas pequeñas):</strong> Más barato que Santorini. Prueba Paros o Naxos.</li>
+            </ul>
+            <button class="close-btn" onclick="toggleArticle(this)">Cerrar</button>
+          </div>
+          <div class="comments-section">
+            <h5>Comentarios</h5>
+            <div class="comments-list"></div>
+            <form class="comment-form" onsubmit="addComment(event, this)">
+              <input type="text" placeholder="Tu nombre" class="comment-name" required>
+              <textarea placeholder="Tu comentario..." class="comment-text" required></textarea>
+              <button type="submit" class="submit-btn">Comentar</button>
+            </form>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTÍCULO 2 -->
+      <article class="article-card" data-category="presupuesto">
+        <div class="article-image" style="background: linear-gradient(135deg, #4ecdc4, #44a08d);">
+          <span class="category-badge">Presupuesto</span>
+        </div>
+        <div class="article-content">
+          <h3>Cómo Planificar un Viaje con Bajo Presupuesto</h3>
+          <p class="article-date">12 de enero, 2026</p>
+          <p class="article-excerpt">Técnicas probadas para viajar gastando menos. Desde buscar vuelos baratos hasta hospedaje económico.</p>
+          <button class="read-btn" onclick="toggleArticle(this)">Leer más</button>
+        </div>
+        <div class="article-full" style="display: none;">
+          <div class="full-content">
+            <h4>Cómo Planificar un Viaje con Bajo Presupuesto</h4>
+            <p>Viajar no tiene que ser caro. Aquí mis mejores tips:</p>
+            <ul>
+              <li><strong>Vuelos:</strong> Busca en Skyscanner, Google Flights. Viaja en temporada baja.</li>
+              <li><strong>Hospedaje:</strong> Airbnb, Booking, hostales. Considera casas de intercambio.</li>
+              <li><strong>Transporte:</strong> Buses locales, trenes económicos. Evita taxis en aeropuertos.</li>
+              <li><strong>Comida:</strong> Come donde comen los locales. Los mercados son más baratos.</li>
+              <li><strong>Actividades:</strong> Muchas ciudades tienen free tours y museos con entrada libre.</li>
+            </ul>
+            <button class="close-btn" onclick="toggleArticle(this)">Cerrar</button>
+          </div>
+          <div class="comments-section">
+            <h5>Comentarios</h5>
+            <div class="comments-list"></div>
+            <form class="comment-form" onsubmit="addComment(event, this)">
+              <input type="text" placeholder="Tu nombre" class="comment-name" required>
+              <textarea placeholder="Tu comentario..." class="comment-text" required></textarea>
+              <button type="submit" class="submit-btn">Comentar</button>
+            </form>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTÍCULO 3 -->
+      <article class="article-card" data-category="checklists">
+        <div class="article-image" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+          <span class="category-badge">Checklist</span>
+        </div>
+        <div class="article-content">
+          <h3>Qué Llevar en tu Mochila de Viaje</h3>
+          <p class="article-date">10 de enero, 2026</p>
+          <p class="article-excerpt">La lista definitiva de lo que necesitas empacar para viajes cortos y largos. No olvides nada importante.</p>
+          <button class="read-btn" onclick="toggleArticle(this)">Leer más</button>
+        </div>
+        <div class="article-full" style="display: none;">
+          <div class="full-content">
+            <h4>Qué Llevar en tu Mochila de Viaje</h4>
+            <p>Essentials para cualquier viajero:</p>
+            <ul>
+              <li>✓ Pasaporte y copias digitales</li>
+              <li>✓ Tarjeta de crédito y efectivo local</li>
+              <li>✓ Cargador universal y power bank</li>
+              <li>✓ Adaptador de enchufes</li>
+              <li>✓ Medicinas básicas y botiquín</li>
+              <li>✓ Ropa versátil para capas</li>
+              <li>✓ Zapatos cómodos para caminar</li>
+              <li>✓ Bloqueador solar y repelente</li>
+              <li>✓ Bolsas pequeñas para organizar</li>
+              <li>✓ Toalla de microfibra (compacta)</li>
+            </ul>
+            <button class="close-btn" onclick="toggleArticle(this)">Cerrar</button>
+          </div>
+          <div class="comments-section">
+            <h5>Comentarios</h5>
+            <div class="comments-list"></div>
+            <form class="comment-form" onsubmit="addComment(event, this)">
+              <input type="text" placeholder="Tu nombre" class="comment-name" required>
+              <textarea placeholder="Tu comentario..." class="comment-text" required></textarea>
+              <button type="submit" class="submit-btn">Comentar</button>
+            </form>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTÍCULO 4 -->
+      <article class="article-card" data-category="guias">
+        <div class="article-image" style="background: linear-gradient(135deg, #fa709a, #fee140);">
+          <span class="category-badge">Guía</span>
+        </div>
+        <div class="article-content">
+          <h3>Qué Ver en Barcelona: Guía Completa</h3>
+          <p class="article-date">8 de enero, 2026</p>
+          <p class="article-excerpt">La ciudad de Gaudí en 3 días. Desde la Sagrada Familia hasta las playas del Mediterráneo.</p>
+          <button class="read-btn" onclick="toggleArticle(this)">Leer más</button>
+        </div>
+        <div class="article-full" style="display: none;">
+          <div class="full-content">
+            <h4>Qué Ver en Barcelona: Guía Completa</h4>
+            <p>Barcelona es una ciudad mágica. Aquí está mi itinerario favorito:</p>
+            <h5>Día 1: Gaudí y Modernismo</h5>
+            <ul>
+              <li>Sagrada Familia (imprescindible)</li>
+              <li>Park Güell con vistas a la ciudad</li>
+              <li>Casa Batlló</li>
+            </ul>
+            <h5>Día 2: Barrios y Playas</h5>
+            <ul>
+              <li>Gothic Quarter (barrio gótico)</li>
+              <li>Las Ramblas</li>
+              <li>Playa de la Barceloneta</li>
+            </ul>
+            <h5>Día 3: Arte y Relajación</h5>
+            <ul>
+              <li>Museo Picasso</li>
+              <li>Montjuïc y fuentes mágicas</li>
+              <li>Tapas en el barrio del Born</li>
+            </ul>
+            <button class="close-btn" onclick="toggleArticle(this)">Cerrar</button>
+          </div>
+          <div class="comments-section">
+            <h5>Comentarios</h5>
+            <div class="comments-list"></div>
+            <form class="comment-form" onsubmit="addComment(event, this)">
+              <input type="text" placeholder="Tu nombre" class="comment-name" required>
+              <textarea placeholder="Tu comentario..." class="comment-text" required></textarea>
+              <button type="submit" class="submit-btn">Comentar</button>
+            </form>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTÍCULO 5 -->
+      <article class="article-card" data-category="destinos">
+        <div class="article-image" style="background: linear-gradient(135deg, #a8edea, #fed6e3);">
+          <span class="category-badge">Destinos</span>
+        </div>
+        <div class="article-content">
+          <h3>Mejores Destinos de Playa por Temporada</h3>
+          <p class="article-date">5 de enero, 2026</p>
+          <p class="article-excerpt">Descubre cuándo es el mejor momento para visitar tus playas favoritas.</p>
+          <button class="read-btn" onclick="toggleArticle(this)">Leer más</button>
+        </div>
+        <div class="article-full" style="display: none;">
+          <div class="full-content">
+            <h4>Mejores Destinos de Playa por Temporada</h4>
+            <h5>Verano (Junio-Agosto)</h5>
+            <ul>
+              <li>Grecia y Croacia (Mediterráneo)</li>
+              <li>Maldivas (temporada seca)</li>
+            </ul>
+            <h5>Invierno (Diciembre-Febrero)</h5>
+            <ul>
+              <li>Tailandia y Camboya (clima perfecto)</li>
+              <li>Caribe (seco y cálido)</li>
+            </ul>
+            <h5>Primavera/Otoño</h5>
+            <ul>
+              <li>España y Portugal</li>
+              <li>Indonesia y Filipinas</li>
+            </ul>
+            <button class="close-btn" onclick="toggleArticle(this)">Cerrar</button>
+          </div>
+          <div class="comments-section">
+            <h5>Comentarios</h5>
+            <div class="comments-list"></div>
+            <form class="comment-form" onsubmit="addComment(event, this)">
+              <input type="text" placeholder="Tu nombre" class="comment-name" required>
+              <textarea placeholder="Tu comentario..." class="comment-text" required></textarea>
+              <button type="submit" class="submit-btn">Comentar</button>
+            </form>
+          </div>
+        </div>
+      </article>
+
+      <!-- ARTÍCULO 6 -->
+      <article class="article-card" data-category="presupuesto">
+        <div class="article-image" style="background: linear-gradient(135deg, #30cfd0, #330867);">
+          <span class="category-badge">Presupuesto</span>
+        </div>
+        <div class="article-content">
+          <h3>Viajeros Digitales: Trabajo Remoto en la Ruta</h3>
+          <p class="article-date">2 de enero, 2026</p>
+          <p class="article-excerpt">Cómo ganar dinero mientras viajas. Opciones para nómadas digitales.</p>
+          <button class="read-btn" onclick="toggleArticle(this)">Leer más</button>
+        </div>
+        <div class="article-full" style="display: none;">
+          <div class="full-content">
+            <h4>Viajeros Digitales: Trabajo Remoto en la Ruta</h4>
+            <p>Si eres nómada digital, estos son tus mejores amigos:</p>
+            <ul>
+              <li><strong>Freelancing:</strong> Upwork, Fiverr, Toptal</li>
+              <li><strong>Enseñanza online:</strong> English teaching (VIPKid, Preply)</li>
+              <li><strong>Coaching/Consultoría:</strong> En tu área de expertise</li>
+              <li><strong>Content creation:</strong> Blog, YouTube, TikTok</li>
+              <li><strong>Trabajos temporales:</strong> Hostales buscan gente en intercambio</li>
+            </ul>
+            <p>Destinos ideales: Portugal, México, Tailandia (wifi bueno + bajo costo).</p>
+            <button class="close-btn" onclick="toggleArticle(this)">Cerrar</button>
+          </div>
+          <div class="comments-section">
+            <h5>Comentarios</h5>
+            <div class="comments-list"></div>
+            <form class="comment-form" onsubmit="addComment(event, this)">
+              <input type="text" placeholder="Tu nombre" class="comment-name" required>
+              <textarea placeholder="Tu comentario..." class="comment-text" required></textarea>
+              <button type="submit" class="submit-btn">Comentar</button>
+            </form>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 · Blog de Viajes - Cintia Ramos</p>
+  </footer>
+
+  <script src="blog.js"></script>
+</body>
+</html>
