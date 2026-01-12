@@ -1,0 +1,142 @@
+/* =========================
+   SECONDARY NAVIGATION
+========================= */
+
+.nav-secondary {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background-color: rgba(10, 5, 20, 0.9);
+  border-bottom: 1px solid rgba(199, 166, 255, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  backdrop-filter: blur(10px);
+}
+
+.nav-secondary a {
+  text-decoration: none;
+  color: #f0f0f5;
+  font-size: 0.95rem;
+  transition: color 0.3s ease;
+}
+
+.nav-secondary a:hover {
+  color: #c7a6ff;
+}
+
+.nav-secondary a.active {
+  color: #c7a6ff;
+  font-weight: 600;
+  border-bottom: 2px solid #c7a6ff;
+  padding-bottom: 5px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+@media (max-width: 768px) {
+  .nav-secondary {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+
+  .nav-links {
+    width: 100%;
+    justify-content: center;
+    gap: 20px;
+  }
+}
+
+/* =========================
+   IMPROVED GALLERY LAYOUTS
+========================= */
+
+/* Invitaciones - Tamaño mediano, más espacio */
+.gallery-invitations {
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.gallery-invitations img {
+  max-height: 400px;
+  object-fit: contain;
+  background-color: rgba(199, 166, 255, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+}
+
+/* Feed - Imágenes cuadradas/rectangulares */
+.gallery-feed {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.gallery-feed img {
+  max-height: 350px;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+/* Historias - Formato vertical optimizado */
+.gallery-stories {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+}
+
+.gallery-stories img {
+  max-height: 450px;
+  object-fit: contain;
+  background-color: rgba(199, 166, 255, 0.05);
+  aspect-ratio: 9/16;
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+  .gallery-invitations {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-feed {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-stories {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .gallery-stories img {
+    max-height: 350px;
+  }
+}
+
+/* =========================
+   HERO PEQUEÑO (para páginas internas)
+========================= */
+
+.hero-small {
+  min-height: 60vh;
+  padding: 40px 20px;
+}
+
+.hero-small h1 {
+  font-size: 2.5rem;
+}
+
+.hero-small p {
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .hero-small h1 {
+    font-size: 1.8rem;
+  }
+  
+  .hero-small p {
+    font-size: 0.9rem;
+  }
+}
