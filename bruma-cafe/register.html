@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrarse - Bruma Café</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Flood&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER Y NAVEGACIÓN -->
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        ☕ Bruma <span class="logo-accent">Café</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-carrito" onclick="location.href='pedidos.html'" title="Ver carrito">
+          🛒
+          <span class="carrito-count" style="display: none;">0</span>
+        </button>
+        <button class="btn btn-secondary btn-small" onclick="location.href='login.html'">Ingresar</button>
+        <button class="menu-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- FORMULARIO DE REGISTRO -->
+    <div class="form-container">
+      <div style="text-align: center; margin-bottom: var(--spacing-xl);">
+        <h1 style="font-size: 2rem; color: var(--texto-claro);">Crear cuenta</h1>
+        <p style="color: var(--texto-gris); margin-bottom: var(--spacing-md);">Únete a Bruma Café</p>
+      </div>
+
+      <form id="registerForm">
+        <div class="form-group">
+          <label for="nombre">Nombre completo</label>
+          <input type="text" id="nombre" name="nombre" required placeholder="Juan Pérez">
+          <div class="form-error">Por favor ingresa tu nombre</div>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" name="email" required placeholder="tu@email.com">
+          <div class="form-error">Por favor ingresa un correo válido</div>
+        </div>
+
+        <div class="form-group">
+          <label for="password">Contraseña</label>
+          <input type="password" id="password" name="password" required placeholder="••••••••">
+          <div class="form-error">La contraseña debe tener al menos 6 caracteres</div>
+        </div>
+
+        <div class="form-group">
+          <label for="confirmPassword">Confirmar contraseña</label>
+          <input type="password" id="confirmPassword" name="confirmPassword" required placeholder="••••••••">
+          <div class="form-error">Las contraseñas no coinciden</div>
+        </div>
+
+        <div class="form-group">
+          <label>
+            <input type="checkbox" name="terminos" required> 
+            Acepto los términos y condiciones
+          </label>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-block" style="margin-bottom: var(--spacing-md);">Crear cuenta</button>
+
+        <div style="text-align: center;">
+          <p style="color: var(--texto-gris);">
+            ¿Ya tienes cuenta?
+            <a href="login.html" style="color: var(--verde-oliva); font-weight: bold;">Inicia sesión aquí</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Bruma Café</h3>
+        <p>Café de especialidad para bajar un cambio. Minimalista, elegante, aireado.</p>
+        <div class="redes-sociales">
+          <a href="#" title="Instagram">📱</a>
+          <a href="#" title="Facebook">📘</a>
+          <a href="#" title="Twitter">𝕏</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Menú</h3>
+        <a href="menu.html">Ver menú completo</a>
+        <a href="pedidos.html">Carrito</a>
+        <a href="#">Promociones</a>
+        <a href="#">Suscripciones</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Sobre Nosotros</h3>
+        <a href="index.html#filosofia">Nuestra filosofía</a>
+        <a href="contact.html">Contacto</a>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Blog</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <a href="#">Términos de servicio</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Bruma Café. Todos los derechos reservados. ☕</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Validación del formulario de registro
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
+      const errors = document.querySelectorAll('.form-error');
+
+      let esValido = true;
+
+      // Validar nombre
+      if (nombre.trim().length < 3) {
+        errors[0].classList.add('show');
+        esValido = false;
+      } else {
+        errors[0].classList.remove('show');
+      }
+
+      // Validar email
+      if (!email.includes('@') || !email.includes('.')) {
+        errors[1].classList.add('show');
+        esValido = false;
+      } else {
+        errors[1].classList.remove('show');
+      }
+
+      // Validar contraseña
+      if (password.length < 6) {
+        errors[2].classList.add('show');
+        esValido = false;
+      } else {
+        errors[2].classList.remove('show');
+      }
+
+      // Validar confirmación de contraseña
+      if (password !== confirmPassword) {
+        errors[3].classList.add('show');
+        esValido = false;
+      } else {
+        errors[3].classList.remove('show');
+      }
+
+      if (esValido) {
+        alert(`¡Bienvenido ${nombre}! 🎉\n\nTu cuenta en Bruma Café ha sido creada exitosamente.\n\n(Esta es una demostración - no hay validación real)`);
+        this.reset();
+        // En una aplicación real, aquí se enviaría el formulario al servidor
+      }
+    });
+
+    // Limpiar errores al escribir
+    document.getElementById('nombre').addEventListener('input', function() {
+      document.querySelectorAll('.form-error')[0].classList.remove('show');
+    });
+
+    document.getElementById('email').addEventListener('input', function() {
+      document.querySelectorAll('.form-error')[1].classList.remove('show');
+    });
+
+    document.getElementById('password').addEventListener('input', function() {
+      document.querySelectorAll('.form-error')[2].classList.remove('show');
+    });
+
+    document.getElementById('confirmPassword').addEventListener('input', function() {
+      document.querySelectorAll('.form-error')[3].classList.remove('show');
+    });
+  </script>
+</body>
+</html>

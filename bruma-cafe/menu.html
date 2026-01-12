@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menú - Bruma Café</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Flood&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER Y NAVEGACIÓN -->
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        ☕ Bruma <span class="logo-accent">Café</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-carrito" onclick="location.href='pedidos.html'" title="Ver carrito">
+          🛒
+          <span class="carrito-count" style="display: none;">0</span>
+        </button>
+        <button class="btn btn-secondary btn-small" onclick="location.href='login.html'">Ingresar</button>
+        <button class="menu-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO DEL MENÚ -->
+    <section class="hero" style="min-height: 300px; background: linear-gradient(135deg, rgba(74, 60, 42, 0.4) 0%, rgba(58, 40, 24, 0.4) 100%), url('assets/images/brumacafe.jpg') center/cover; background-attachment: fixed;">
+      <div class="hero-content">
+        <h1>Nuestro Menú</h1>
+        <p class="slogan">Descubre nuestras bebidas de especialidad</p>
+      </div>
+    </section>
+
+    <!-- MENÚ DE PRODUCTOS -->
+    <section>
+      <div class="section-title">
+        <h2>Todas nuestras bebidas</h2>
+        <p class="section-subtitle">Selecciona tu tamaño favorito y agrega al carrito</p>
+      </div>
+
+      <div class="productos-grid">
+        <!-- Los productos se renderizarán dinámicamente con menu.js -->
+      </div>
+
+      <div class="text-center" style="margin-top: var(--spacing-xl);">
+        <a href="index.html" class="btn btn-outline">Volver a home</a>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Bruma Café</h3>
+        <p>Café de especialidad para bajar un cambio. Minimalista, elegante, aireado.</p>
+        <div class="redes-sociales">
+          <a href="#" title="Instagram">📱</a>
+          <a href="#" title="Facebook">📘</a>
+          <a href="#" title="Twitter">𝕏</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Menú</h3>
+        <a href="menu.html">Ver menú completo</a>
+        <a href="pedidos.html">Carrito</a>
+        <a href="#">Promociones</a>
+        <a href="#">Suscripciones</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Sobre Nosotros</h3>
+        <a href="index.html#filosofia">Nuestra filosofía</a>
+        <a href="contact.html">Contacto</a>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Blog</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <a href="#">Términos de servicio</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Bruma Café. Todos los derechos reservados. ☕</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>

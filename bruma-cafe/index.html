@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bruma Café - Café de Especialidad</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Flood&family=Playfair+Display:ital@0;1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- HEADER Y NAVEGACIÓN -->
+  <header>
+    <div class="header-content">
+      <div class="logo">
+        ☕ Bruma <span class="logo-accent">Café</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="menu.html">Menú</a></li>
+          <li><a href="pedidos.html">Pedidos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="btn-carrito" onclick="location.href='pedidos.html'" title="Ver carrito">
+          🛒
+          <span class="carrito-count" style="display: none;">0</span>
+        </button>
+        <button class="btn btn-secondary btn-small" onclick="location.href='login.html'">Ingresar</button>
+        <button class="menu-toggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero" style="background: linear-gradient(135deg, rgba(74, 60, 42, 0.4) 0%, rgba(58, 40, 24, 0.4) 100%), url('assets/images/brumacafe.jpg') center/cover; background-attachment: fixed;">
+      <div class="hero-content">
+        <h1>Bruma Café</h1>
+        <p class="slogan">Café para bajar un cambio</p>
+        <div class="hero-buttons">
+          <a href="menu.html" class="btn btn-primary">Ver Menú</a>
+          <a href="#filosofia" class="btn btn-outline">Nuestra Historia</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN FILOSOFÍA -->
+    <section id="filosofia">
+      <div class="section-title">
+        <h2>Nuestra Filosofía</h2>
+        <p class="section-subtitle">Un café diferente para tiempos diferentes</p>
+      </div>
+
+      <div class="filosofia-content">
+        <div class="filosofia-text">
+          <p>
+            En Bruma Café creemos que el café es más que una bebida. Es un ritual, un momento de pausa en tu día ajetreado. Cada taza cuenta la historia de su origen, del terroir donde creció, de los manos que lo cosecharon.
+          </p>
+          <p>
+            Trabajamos con productores locales y pequeños distribuidores para traerte café de especialidad de la más alta calidad. Tostamos nuestros granos a medida, garantizando que cada café que preparan nuestros baristas esté en su punto perfecto.
+          </p>
+          <p>
+            Nuestro espacio es minimalista y acogedor, diseñado para que puedas desconectar, trabajar o simplemente disfrutar del aroma de un buen café. En Bruma Café, el tiempo se ralentiza.
+          </p>
+        </div>
+        <div class="filosofia-image" style="background-image: url('assets/images/filosofia.jpg'); background-size: cover; background-position: center;"></div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN DESTACADOS -->
+    <section>
+      <div class="section-title">
+        <h2>Nuestros Favoritos</h2>
+        <p class="section-subtitle">Los imprescindibles según nuestro barista</p>
+      </div>
+
+      <div class="productos-grid">
+        <!-- Espresso Clásico -->
+        <div class="producto-card">
+          <div class="producto-imagen" style="background-image: url('assets/images/espresso.jpg'); background-size: cover; background-position: center;"></div>
+          <div class="producto-info">
+            <h3 class="producto-nombre">Espresso Clásico</h3>
+            <p class="producto-descripcion">Espresso puro de origen único, intenso y aromático. Perfecto para los que aman los sabores profundos.</p>
+            <div class="producto-precio">$250</div>
+            <div class="producto-tamaños">
+              <button class="tamano-option active" data-tamaño="S" data-multiplicador="1">Chico</button>
+              <button class="tamano-option" data-tamaño="M" data-multiplicador="1.2">Mediano</button>
+              <button class="tamano-option" data-tamaño="L" data-multiplicador="1.4">Grande</button>
+            </div>
+            <button class="btn btn-primary btn-block agregar-carrito" data-id="1">Agregar al carrito</button>
+          </div>
+        </div>
+
+        <!-- Cappuccino Terciopelo -->
+        <div class="producto-card">
+          <div class="producto-imagen" style="background-image: url('assets/images/terciopelo.jpg'); background-size: cover; background-position: center;"></div>
+          <div class="producto-info">
+            <h3 class="producto-nombre">Cappuccino Terciopelo</h3>
+            <p class="producto-descripcion">Espresso con leche vaporizada y espuma sedosa. El equilibrio perfecto entre café y leche.</p>
+            <div class="producto-precio">$320</div>
+            <div class="producto-tamaños">
+              <button class="tamano-option active" data-tamaño="S" data-multiplicador="1">Chico</button>
+              <button class="tamano-option" data-tamaño="M" data-multiplicador="1.2">Mediano</button>
+              <button class="tamano-option" data-tamaño="L" data-multiplicador="1.4">Grande</button>
+            </div>
+            <button class="btn btn-primary btn-block agregar-carrito" data-id="2">Agregar al carrito</button>
+          </div>
+        </div>
+
+        <!-- Cold Brew -->
+        <div class="producto-card">
+          <div class="producto-imagen" style="background-image: url('assets/images/coldbrew.jpg'); background-size: cover; background-position: center;"></div>
+          <div class="producto-info">
+            <h3 class="producto-nombre">Cold Brew</h3>
+            <p class="producto-descripcion">Café frío preparado en frío por 12 horas. Suave, refrescante y con menos acidez.</p>
+            <div class="producto-precio">$290</div>
+            <div class="producto-tamaños">
+              <button class="tamano-option active" data-tamaño="S" data-multiplicador="1">Chico</button>
+              <button class="tamano-option" data-tamaño="M" data-multiplicador="1.2">Mediano</button>
+              <button class="tamano-option" data-tamaño="L" data-multiplicador="1.4">Grande</button>
+            </div>
+            <button class="btn btn-primary btn-block agregar-carrito" data-id="5">Agregar al carrito</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center" style="margin-top: var(--spacing-xl);">
+        <a href="menu.html" class="btn btn-secondary">Ver todo el menú</a>
+      </div>
+    </section>
+
+    <!-- CALL TO ACTION -->
+    <section class="cta-section">
+      <h2>Pedí en línea</h2>
+      <p>Compra tu café favorito desde casa y recibilo en tu puerta</p>
+      <a href="menu.html" class="btn btn-primary">Hacer un pedido</a>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Bruma Café</h3>
+        <p>Café de especialidad para bajar un cambio. Minimalista, elegante, aireado.</p>
+        <div class="redes-sociales">
+          <a href="#" title="Instagram">📱</a>
+          <a href="#" title="Facebook">📘</a>
+          <a href="#" title="Twitter">𝕏</a>
+        </div>
+      </div>
+
+      <div class="footer-section">
+        <h3>Menú</h3>
+        <a href="menu.html">Ver menú completo</a>
+        <a href="pedidos.html">Carrito</a>
+        <a href="#">Promociones</a>
+        <a href="#">Suscripciones</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Sobre Nosotros</h3>
+        <a href="#filosofia">Nuestra filosofía</a>
+        <a href="contact.html">Contacto</a>
+        <a href="#">Preguntas frecuentes</a>
+        <a href="#">Blog</a>
+      </div>
+
+      <div class="footer-section">
+        <h3>Legal</h3>
+        <a href="#">Términos de servicio</a>
+        <a href="#">Política de privacidad</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Bruma Café. Todos los derechos reservados. ☕</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/menu.js"></script>
+</body>
+</html>
