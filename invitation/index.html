@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Invitación digital elegante para eventos especiales">
+    <title>Invitación Digital - Evento Especial</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Hero Section - Animated Card -->
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="invitation-card">
+                <div class="card-ornament top"></div>
+                
+                <div class="card-content">
+                    <div class="event-type">
+                        <span class="ornament-line"></span>
+                        <p>Estás Invitado a</p>
+                        <span class="ornament-line"></span>
+                    </div>
+                    
+                    <h1 class="event-title">Celebración Especial</h1>
+                    
+                    <div class="honoree-name">
+                        <h2>María Fernanda</h2>
+                    </div>
+                    
+                    <div class="event-date">
+                        <div class="date-item">
+                            <span class="date-label">Fecha</span>
+                            <span class="date-value">15 de Marzo, 2026</span>
+                        </div>
+                        <div class="date-item">
+                            <span class="date-label">Hora</span>
+                            <span class="date-value">18:00 hrs</span>
+                        </div>
+                    </div>
+                    
+                    <button class="cta-button" id="viewDetailsBtn" aria-label="Ver detalles del evento">
+                        <span>Ver Detalles</span>
+                        <svg class="arrow-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M10 4L10 16M10 16L16 10M10 16L4 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="card-ornament bottom"></div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Details Section - Landing Page -->
+    <section id="details" class="details-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Detalles del Evento</h2>
+                <p class="section-subtitle">Te esperamos para celebrar juntos</p>
+            </div>
+
+            <!-- Countdown Timer -->
+            <div class="countdown-container">
+                <h3>Faltan</h3>
+                <div class="countdown" id="countdown">
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="days">00</span>
+                        <span class="countdown-label">Días</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="hours">00</span>
+                        <span class="countdown-label">Horas</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="minutes">00</span>
+                        <span class="countdown-label">Minutos</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="countdown-value" id="seconds">00</span>
+                        <span class="countdown-label">Segundos</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Event Information -->
+            <div class="event-info-grid">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <path d="M8 2V5M16 2V5M3.5 9.09H20.5M21 8.5V17C21 20 19.5 22 16 22H8C4.5 22 3 20 3 17V8.5C3 5.5 4.5 3.5 8 3.5H16C19.5 3.5 21 5.5 21 8.5Z" stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.6947 13.7H15.7037M15.6947 16.7H15.7037M11.9955 13.7H12.0045M11.9955 16.7H12.0045M8.29431 13.7H8.30329M8.29431 16.7H8.30329" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                    <h3>Fecha y Hora</h3>
+                    <p><strong>15 de Marzo, 2026</strong></p>
+                    <p>18:00 hrs</p>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 13.43C13.7231 13.43 15.12 12.0331 15.12 10.31C15.12 8.58687 13.7231 7.19 12 7.19C10.2769 7.19 8.88 8.58687 8.88 10.31C8.88 12.0331 10.2769 13.43 12 13.43Z" stroke="currentColor" stroke-width="1.5"/>
+                            <path d="M3.62001 8.49C5.59001 -0.169998 18.42 -0.159997 20.38 8.5C21.53 13.58 18.37 17.88 15.6 20.54C13.59 22.48 10.41 22.48 8.39001 20.54C5.63001 17.88 2.47001 13.57 3.62001 8.49Z" stroke="currentColor" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+                    <h3>Ubicación</h3>
+                    <p><strong>Salón de Eventos Jardín</strong></p>
+                    <p>Av. Principal #123, Ciudad</p>
+                    <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="link-button">Ver en mapa</a>
+                </div>
+
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2C6.49 2 2 6.49 2 12C2 17.51 6.49 22 12 22C17.51 22 22 17.51 22 12C22 6.49 17.51 2 12 2ZM16.35 15.57C16.21 15.81 15.96 15.94 15.7 15.94C15.57 15.94 15.44 15.91 15.32 15.83L12.22 13.98C11.45 13.52 10.88 12.51 10.88 11.62V7.52C10.88 7.11 11.22 6.77 11.63 6.77C12.04 6.77 12.38 7.11 12.38 7.52V11.62C12.38 11.98 12.68 12.51 12.99 12.69L16.09 14.54C16.45 14.75 16.57 15.21 16.35 15.57Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3>Código de Vestimenta</h3>
+                    <p><strong>Formal / Semi-formal</strong></p>
+                    <p>Colores sugeridos: Tonos pastel</p>
+                </div>
+            </div>
+
+            <!-- RSVP Section -->
+            <div class="rsvp-section">
+                <h3>Confirma tu Asistencia</h3>
+                <p>Por favor confirma tu asistencia antes del 1 de Marzo</p>
+                <a href="https://wa.me/1234567890?text=Hola,%20confirmo%20mi%20asistencia%20al%20evento" 
+                   target="_blank" 
+                   rel="noopener noreferrer" 
+                   class="whatsapp-button"
+                   aria-label="Confirmar asistencia por WhatsApp">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                    </svg>
+                    Confirmar por WhatsApp
+                </a>
+            </div>
+
+            <!-- Gallery Section -->
+            <div class="gallery-section">
+                <h3>Galería</h3>
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="assets/boda1.jpg" alt="Momento especial del evento">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/boda2.jpg" alt="Celebración del evento">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/boda3.jpg" alt="Recuerdos del evento">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="assets/boda5.jpg" alt="Momentos especiales">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>¡Esperamos verte pronto! 💝</p>
+            <p class="footer-note">Invitación Digital - Creada con ❤️</p>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

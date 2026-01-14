@@ -176,7 +176,7 @@ nav a:hover::after {
   background: none;
   border: none;
   font-size: 1.5rem;
-  cursor: pointtexto-claro
+  cursor: pointer;
   color: var(--marron-cafe);
 }
 
